@@ -30,18 +30,18 @@ class Profile(models.Model):
     full_name = models.CharField(max_length=100, null=True)
     age = models.IntegerField(null=True)
     gender = models.CharField(
-        max_length=50, blank=True, null=True, choices=GENDER_C)
+        blank=True, null=True, choices=GENDER_C)
     profile_image = models.ImageField(
         upload_to='profile_pic', default="default.jpg", null=True, blank=True)
     bio = models.TextField(null=True)
-    tech_stack = models.CharField(max_length=500, null=True)
+    tech_stack = models.CharField(null=True)
 
     editor = models.CharField(
-        max_length=9, choices=TEXT_C, default=None, null=True, blank=True)
+        choices=TEXT_C, default=None, null=True, blank=True)
     os = models.CharField(
-        max_length=10, choices=OS_C, default=None, null=True, blank=True)
+        choices=OS_C, default=None, null=True, blank=True)
     spacing = models.CharField(
-        max_length=10, choices=SPACES_C, default=None, null=True, blank=True)
+        choices=SPACES_C, default=None, null=True, blank=True)
 
     likeability = models.ManyToManyField(
         User, related_name="likes", blank=True)
