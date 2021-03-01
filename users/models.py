@@ -6,10 +6,10 @@ from PIL import Image
 
 class Profile(models.Model):
     TEXT_C = [
-        ("Proj1", "Proj1"),
-        ("Proj2", "Proj2"),
-        ("Proj3", "Proj3"),
-        ("Proj4", "Proj4")
+        ("Project 1", "Project 1"),
+        ("Project 2", "Project 2"),
+        ("Project 3", "Project 3"),
+        ("Project 4", "Project 4")
     ]
     GENDER_C = [
         ("Male", "Male"),
