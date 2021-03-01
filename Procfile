@@ -1,0 +1,1 @@
+web: gunicorn GitMerged.wsgi:application --log-file -
